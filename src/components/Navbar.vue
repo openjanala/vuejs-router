@@ -3,11 +3,18 @@
         <nav>
             <ul>
                 <li><router-link to="/">Home</router-link></li>
-                <li><router-link to="/About">About</router-link></li>
-                <li><router-link :to="{name:'Contact'}">Contact</router-link></li>
-                <li><router-link to="/Profile">Profile</router-link></li>
+                <li><router-link to="/about">About</router-link></li>
+                <li><router-link :to="{name:'contact'}">Contact</router-link></li>
+                <li><router-link to="/profile">Profile</router-link></li>
             </ul>
         </nav>
+        <div class="profileId">
+            <ul>
+                <li v-for="(id, index) in userIds" :key="index">
+                    <router-link :to="{name:'profile', params:{user_id:id} }">Profile {{id}}</router-link>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -16,7 +23,7 @@ export default {
     name:'Navbar',
     data(){
         return{
-
+            userIds:['1','2','3','4','7']
         }
     }
 }
@@ -40,4 +47,9 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
 }
+.profileId ul li{
+    list-style: none;;
+}
+
+
 </style>
