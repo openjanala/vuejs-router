@@ -69,6 +69,8 @@ nav a {
 .profileId ul li{
     list-style: none;;
 }
-
+a.router-link-exact-active{
+      color:red;
+    }
 
 </style>
