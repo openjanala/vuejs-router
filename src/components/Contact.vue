@@ -9,7 +9,7 @@
 <script>
 export default {
   name: 'Contact',
-  data () {
+  data() {
     return {
       title: 'This is Contact Component'
     }

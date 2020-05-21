@@ -5,6 +5,7 @@
                 <li><router-link to="/">Home</router-link></li>
                 <li><router-link to="/About">About</router-link></li>
                 <li><router-link :to="{name:'Contact'}">Contact</router-link></li>
+                <li><router-link to="/Profile">Profile</router-link></li>
             </ul>
         </nav>
     </div>
