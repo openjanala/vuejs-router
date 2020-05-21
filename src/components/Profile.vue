@@ -1,6 +1,6 @@
 <template>
     <div class="profile">
-        <h2>Profile | User Id = ( {{UserId}} )</h2>
+        <h2>Profile User Id = ( {{userId}} )</h2>
     </div>
 </template>
 
@@ -10,8 +10,16 @@ export default {
    name:'Profile',
    data(){
         return {
-            UserId: this.$route.params.user_id
+            userId: this.$route.params.user_id
         }
+    },
+    methods:{
+        updateId(){
+            this.userId = this.$route.params.user_id
+        }
+    },
+    watch:{
+        $route:'updateId'
     }
 }
 </script>
