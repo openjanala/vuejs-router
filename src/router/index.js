@@ -8,6 +8,7 @@ import Profile from '@/components/Profile'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -16,14 +17,14 @@ export default new Router({
     },
 
     {
-      path: '/About',
-      name: 'About',
+      path: '/about',
+      name: 'about',
       component: About
     },
 
     {
-      path: '/Contact',
-      name: 'Contact',
+      path: '/contact',
+      name: 'contact',
       component: Contact
     },
     {
